@@ -8,7 +8,7 @@ let div = createEl('div', 'wrapper');
 let body = getByTag('body');
 prepend(body, div);
 // создайте неупорядоченный список
-let ul =createUi();
+let ul =createUl();
 // создайте картинку
 // добавьте картинке класс "cute"
 createImg();
@@ -61,12 +61,12 @@ function createImg() {
     append(div, img);
 }
 
-function createUi() {
+function createUl() {
     let ul = createEl('ul');
     // добавьте списку 3 элемента списка со словами: "один, два и три"
     let uiText = ["один", "два", "три"];
     uiText.forEach(element => {
-        let ui = createEl('ui');
+        let ui = createEl('li');
         ui.innerText = element;
         append(ul, ui);
     });
